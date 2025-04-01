@@ -1,1 +1,1 @@
-Just a newbie project
+learning project
