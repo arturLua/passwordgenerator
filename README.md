@@ -1,10 +1,10 @@
 # This code generates a random string, which can be used as a password up to as many characters you want. 
 
 ## It ensures it has:
-- Uppercases
-- Lowercases
-- Digits
-- Punctuations
+- **Uppercases**
+- **Lowercases**
+- **Digits**
+- **Punctuations**
 
 And also shuffles to make it a better password.
 
