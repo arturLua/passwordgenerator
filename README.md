@@ -7,5 +7,5 @@
 - **Punctuations**
 
 And also shuffles to make it a better password.
-I chose to make it **8+ characters** length because that's the minimum in many places on the internet. (and also to have a bit of safety).
+I chose to make it **8+ characters** length because that's the minimum in many places on the internet (and also to have a bit of safety).
 That is one of my first codes when i was first learning Python and Programming Logics.
