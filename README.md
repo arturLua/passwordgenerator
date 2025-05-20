@@ -13,8 +13,7 @@ Characters are shuffled to maximize randomness and security.
 ## 🚀 Getting Started
 
 ### Prerequisites
-Make sure you have **Python 3.x** installed on your system.  
-You can download it from [python.org](https://www.python.org/downloads/).
+Make sure you have **Python 3.x** installed on your system. (You can download it from [python.org](https://www.python.org/downloads/)).<br>
 To run the code, simply execute the **'GeradorSenha.py'** file located in the main branch.
 
 ## ❓ Why 8+ Characters?
