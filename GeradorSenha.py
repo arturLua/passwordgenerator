@@ -1,6 +1,6 @@
 import string
 import random
-print('Password Generator\n')
+print('🔐 Random Password Generator\n')
 
 characterList = list(string.ascii_letters + string.digits + string.punctuation)
 
@@ -17,14 +17,14 @@ def generate_password(length): # Generated password will have one of each type, 
 
 length = None
 while length is None or length < 8:
-    print('Choose the length of your password (8+ characters)')
+    print('Choose the length of the password (8+ characters)')
     try:
         length = int(input("Enter password length: "))
         if length < 8:
-            print('Password length must be at least 8 characters')
+            print('Password length must be at least 8 characters! Try again.')
     except ValueError:
-        print('Invalid input. Please enter an integer numeric value')
+        print('Invalid input. Please enter an integer numeric value. ')
 
 password = generate_password(length)
-print(f'Your generated password is: {password}')
+print(f"🔑 - {password}")
 input("\nPress Enter to exit . . . ")
