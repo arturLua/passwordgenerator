@@ -18,8 +18,8 @@ To run the code, simply execute the **'GeradorSenha.py'** file located in the ma
 
 ## ❓ Why 8+ Characters?
 
-The default minimum length is set to 8 characters, following common industry standards and platform requirements for baseline password security.<br><br>
-According to the **NIST** (National Institute of Standards and Technology), passwords must be at least 8 characters long — and ideally **15 characters or more** for better protection.
+The default minimum length is set to 8 characters, following common industry standards and platform requirements for password security.<br><br>
+According to the **NIST** (National Institute of Standards and Technology), passwords must be at least 8 characters long and ideally **15 characters or more** for better protection.
 
 ## 🧠 About
 This was one of my first projects when I started learning Python and programming logic. It helped me understand how to work with randomization, string manipulation, and basic input/output.
