@@ -1,6 +1,6 @@
 import string
 import random
-print('🔐 Random Password Generator\n')
+print('Random Password Generator\n')
 
 characterList = list(string.ascii_letters + string.digits + string.punctuation)
 
