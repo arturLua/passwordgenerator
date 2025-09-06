@@ -1,32 +1,23 @@
-import string
-import random
 import secrets
+import requests
 
-print('Random Password Generator\n')
+print('|| RANDOM PASSWORD GENERATOR ||\n')
 
-characterList = list(string.ascii_letters + string.digits + string.punctuation)
+url = "https://www.cs.utexas.edu/~mitra/csFall2022/cs313/assgn/words.txt" # Curated word list file
+resp = requests.get(url)
+words = resp.text.splitlines()
 
-def generate_password(length): # Generated password will have one of each type, randomize it(shuffle) and put it all together(join).
-    password = [
-        random.choice(string.ascii_uppercase),
-        random.choice(string.ascii_lowercase),
-        random.choice(string.digits),
-        random.choice(string.punctuation)
-    ]
-    password += random.choices(characterList, k=length-4)
-    random.shuffle(password)
-    return ''.join(password)
-
-length = None
-while length is None or length < 8:
-    print('Choose the length of the password (8+ characters)')
+num_words = None
+while num_words is None or num_words < 4:
     try:
-        length = int(input("Enter password length: "))
-        if length < 8:
-            print('Password length must be at least 8 characters! Try again.')
+        num_words = int(input("Enter number of words for length: "))
+        if num_words < 4:
+            print('Must be at least 4 words! Try again.')
     except ValueError:
-        print('Invalid input. Please enter an integer numeric value. ')
+        print('Invalid input. Please enter a number. ')
 
-password = generate_password(length)
-print(f"🔑 - {password}")
-input("\nPress Enter to exit . . . ")
+password_list = [secrets.choice(words) for _ in range(num_words)]
+password = "-".join(password_list) # Separates words by a hyphen
+
+print(f"Generated Password below:\n > {password} < " )
+input("Press Enter to exit ... ")
