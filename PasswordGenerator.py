@@ -1,3 +1,4 @@
+import string
 import secrets
 import requests
 
@@ -10,14 +11,24 @@ words = resp.text.splitlines()
 num_words = None
 while num_words is None or num_words < 4:
     try:
-        num_words = int(input("Enter number of words for length: "))
+        num_words = int(input("Enter amount of words for your password (min 4): "))
         if num_words < 4:
             print('Must be at least 4 words! Try again.')
     except ValueError:
         print('Invalid input. Please enter a number. ')
 
-password_list = [secrets.choice(words) for _ in range(num_words)]
-password = "-".join(password_list) # Separates words by a hyphen
+symbols = string.digits + "!@#$%^&*"
+
+# Randomization with special characters
+def randomize_word(word):
+    word = word.capitalize()
+    pos = secrets.randbelow(len(word)+1)
+    token = secrets.choice(symbols)
+    word = word[:pos] + token + word[pos:]
+    return word
+
+password_list = [randomize_word(secrets.choice(words)) for _ in range(num_words)]
+password = "-".join(password_list)
 
 print(f"Generated Password below:\n > {password} < " )
 input("Press Enter to exit ... ")

@@ -1,6 +1,6 @@
 # 🔐 Random Password Generator
 
-This simple Python script aims to generate secure, random passwords using English words, with optional digits and symbols for extra security. Inspired by the famous [xkcd #936](https://xkcd.com/936/) comic strip - making passwords easy for humans to remember and hard for machines to crack.
+This Python script aims to generate secure, random passwords using English words, with digits and symbols for extra security. Inspired by the famous [xkcd #936](https://xkcd.com/936/) comic strip - making passwords easy for humans to remember and hard for machines to crack.
 
 ## Key Features:
 - ✅ Random words from an English wordlist
