@@ -6,8 +6,8 @@ This Python script aims to generate secure, random passwords using English words
 ## Key Features:
 - ✅ Random words from an English wordlist
 - ✅ Minimum of 4 words for strong entropy (customizable)
-- 🔜 Digits support
-- 🔜 Punctuation symbols support
+- ✅ Digits support
+- ✅ Punctuation symbols support
 - 🔒 Words and symbols are shuffled for maximum randomness.
 
 ## 🚀 How to run
@@ -17,7 +17,6 @@ Make sure you have **Python 3.x** installed on your system. (You can download it
 To run the code, simply execute the **'PasswordGenerator.py'** file located in the main branch.
 
 ## ❓ About the project
-
 I'm using a minimum length of 4 random words, for better entropy(measure of a password's strength, quantifying its unpredictability). This project follows common industry standards for symbols and special characters.
 
 ## 🧠 Motivation
