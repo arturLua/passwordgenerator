@@ -24,11 +24,11 @@ def randomize_word(word):
     word = word.capitalize()
     pos = secrets.randbelow(len(word)+1)
     token = secrets.choice(symbols)
-    word = word[:pos] + token + word[pos:]
+    word = word + token
     return word
 
 password_list = [randomize_word(secrets.choice(words)) for _ in range(num_words)]
 password = "-".join(password_list)
 
 print(f"Generated Password below:\n > {password} < " )
-input("Press Enter to exit ... ")
+input("Press [Enter] to exit")
