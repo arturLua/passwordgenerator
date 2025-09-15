@@ -18,3 +18,7 @@ This generator uses a minimum length of 5 random words, for better entropy. Entr
 
 ### Motivation
 This was one of my first projects when I started learning Python and programming logic. It helped me understand how to work with imports, string manipulation, input/output and UX in general. I'm planning on making this an effective, trustful tool to generate passwords without the need of a complex app or authentication.
+
+## License
+This project is licensed under a custom MIT-based license for **non-commercial use**.  
+See the [LICENSE](./LICENSE) file for full details.
