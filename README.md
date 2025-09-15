@@ -10,14 +10,14 @@ This Python script aims to generate secure, random passwords using English words
 - ✅ Punctuation symbols support
 - 🔒 Words and symbols are shuffled for maximum randomness.
 
-## 🚀 How to run
+## How to run
 
 ### Prerequisites
 Make sure you have **Python 3.x** installed on your system. (You can download it from [python.org](https://www.python.org/downloads/)).<br>
 To run the code, simply execute the **'PasswordGenerator.py'** file located in the main branch.
 
-## ❓ About the project
+## About the project
 The generator uses a minimum length of 4 random words, for better entropy. Entropy is a measure of a password's strength, quantifying its unpredictability. This project also follows common industry standards for symbols and special characters.
 
-## 🧠 Motivation
+## Motivation
 This was one of my first projects when I started learning Python and programming logic. It helped me understand how to work with randomization, string manipulation, and basic input/output. I'm planning on making this an effective and trustful tool of generating a password without the need of a complex app or authentication.
