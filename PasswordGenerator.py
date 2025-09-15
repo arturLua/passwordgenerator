@@ -4,9 +4,14 @@ import requests
 
 print('|| RANDOM PASSWORD GENERATOR ||\n')
 
-url = "https://www.cs.utexas.edu/~mitra/csFall2022/cs313/assgn/words.txt" # Curated word list file
-resp = requests.get(url)
-words = resp.text.splitlines()
+try:
+    url = "https://www.cs.utexas.edu/~mitra/csFall2022/cs313/assgn/words.txt" # Curated word list file
+    resp = requests.get(url)
+    words = resp.text.splitlines()
+    
+except requests.RequestException:
+    print("Erro ao acessar a lista de palavras.")
+    exit(1)
 
 num_words = None
 while num_words is None or num_words < 4:
@@ -19,7 +24,7 @@ while num_words is None or num_words < 4:
 
 symbols = string.digits + "!@#$%^&*"
 
-# Randomization with special characters
+# Randomization with special characters / numbers
 def randomize_word(word):
     word = word.capitalize()
     token = secrets.choice(symbols)
@@ -30,4 +35,4 @@ password_list = [randomize_word(secrets.choice(words)) for _ in range(num_words)
 password = "-".join(password_list)
 
 print(f"Generated Password below:\n > {password} < " )
-input("Press [Enter] to exit")
+input("Press [Enter] to exit ")
