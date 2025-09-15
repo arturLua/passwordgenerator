@@ -22,7 +22,6 @@ symbols = string.digits + "!@#$%^&*"
 # Randomization with special characters
 def randomize_word(word):
     word = word.capitalize()
-    pos = secrets.randbelow(len(word)+1)
     token = secrets.choice(symbols)
     word = word + token
     return word
