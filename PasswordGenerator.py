@@ -14,11 +14,11 @@ except requests.RequestException:
     exit(1)
 
 num_words = None
-while num_words is None or num_words < 4:
+while num_words is None or num_words < 5:
     try:
-        num_words = int(input("Enter amount of words for your password (min 4): "))
-        if num_words < 4:
-            print('Must be at least 4 words! Try again.')
+        num_words = int(input("Enter amount of words for your password (min 5): "))
+        if num_words < 5:
+            print('Must be at least 5 words! Try again.')
     except ValueError:
         print('Invalid input. Please enter a number. ')
 
