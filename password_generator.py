@@ -24,7 +24,7 @@ while num_words is None or num_words < 5:
 
 symbols = string.digits + "!@#$%^&*"
 
-capitalize_choice = input("Capitalize letters? Y / N: ").lower()
+capitalize_choice = input("Capitalize letters? [Y] / [N]: ").lower()
 capitalize = capitalize_choice == "y"
 
 # Randomization with special characters / numbers
@@ -35,8 +35,15 @@ def randomize_word(word):
     word = word + token
     return word
 
-password_list = [randomize_word(secrets.choice(words)) for _ in range(num_words)]
-password = "-".join(password_list)
+while True:
+    password_list = [randomize_word(secrets.choice(words)) for _ in range(num_words)]
+    password = "-".join(password_list)
+    
+    print("\nSuccessfully Generated! Copy below:")
+    print(f"\n{password}\n")
+    
+    tryAgain = input("Generate another one? [Y] / [N]: ").lower()
+    if tryAgain != "y":
+        input("Press [Enter] to exit ")
+        break
 
-print(f"Generated Password below:\n > {password} < " )
-input("Press [Enter] to exit ")
