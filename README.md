@@ -1,6 +1,6 @@
 # Random Password Generator
 
-This Python script creates strong, up-to-date passwords by stringing together random English words with digits and symbols, striving to keep things secure without making you overthink it.<br> 
+This Python script creates strong, up-to-date passwords by stringing together random English words with digits and symbols, striving to keep things secure without making you overthink it.<br><br> 
 Inspired by the famous [xkcd #936 comic strip](https://xkcd.com/936/) - *Making passwords easy for humans to remember and hard for machines to crack*.
 
 ### Key Features:
