@@ -56,7 +56,7 @@ Download Python from [python.org](https://www.python.org/downloads/). To check i
      ```
      python3 --version
      ```
-On both systems, the version should be displayed on the output, e. g., 3.13.0
+On both systems, the version should be displayed on the output, e. g., "Python 3.13.0"
 
 </details>
 
