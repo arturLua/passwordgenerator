@@ -11,7 +11,7 @@ Inspired by the famous [xkcd #936 comic strip](https://xkcd.com/936/) - *Making 
 
 ### How to run
 Make sure you have **Python 3.x** installed on your system. (Download it from [python.org](https://www.python.org/downloads/)).<br>
-To run the code, simply execute the **'PasswordGenerator.py'** file located in the main branch.
+To run the code, simply execute the **'password_generator.py'** file located in the main branch.
 
 ## About the project
 This generator uses a minimum length of 5 random words, for better entropy. Entropy is a measure of a password's strength, quantifying its unpredictability. This project also follows common industry standards for symbols and special characters.
