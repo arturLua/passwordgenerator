@@ -39,7 +39,7 @@ python password_generator.py
 
 <details>
   
-<summary> How to check if Python is installed?</summary>
+<summary> How to check if Python is installed❓</summary>
 
 ---
 
