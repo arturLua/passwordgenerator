@@ -16,8 +16,8 @@ def get_words():
         print("Error acessing the word list.")
         exit(1)
 
+# -------------------- #
 
-# Randomization with special characters / numbers
 def randomize_word(word, capitalize=False, include_special=False):
     if capitalize:
         word = word.capitalize()
@@ -27,6 +27,7 @@ def randomize_word(word, capitalize=False, include_special=False):
         word = word + special_char
 
     return word
+
 # -------------------- #
 
 words = get_words()
@@ -49,6 +50,8 @@ capitalize = capitalize_choice == "y"
 
 include_special_choice = input("Include special characters / numbers in words? [Y] / [N]: ").lower()
 include_special = include_special_choice == "y"
+
+# -------------------- #
 
 while True:
     password_list = [randomize_word(secrets.choice(words), capitalize, include_special) for _ in range(num_words)]
