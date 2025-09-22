@@ -4,14 +4,32 @@ import requests
 
 print('\n|| RANDOM PASSWORD GENERATOR ||\n')
 
-try:
-    url = "https://www.cs.utexas.edu/~mitra/csFall2022/cs313/assgn/words.txt" # Curated word list file
-    resp = requests.get(url)
-    words = resp.text.splitlines()
+
+def get_words():
+    try:
+        url = "https://www.cs.utexas.edu/~mitra/csFall2022/cs313/assgn/words.txt" # Curated word list file
+        resp = requests.get(url)
+        words = resp.text.splitlines()
+        return words
+
+    except requests.RequestException:
+        print("Error acessing the word list.")
+        exit(1)
+
+
+# Randomization with special characters / numbers
+def randomize_word(word, capitalize=False, include_special=False):
+    if capitalize:
+        word = word.capitalize()
     
-except requests.RequestException:
-    print("Error acessing the word list.")
-    exit(1)
+    if include_special:
+        special_char = secrets.choice(symbols)
+        word = word + special_char
+
+    return word
+# -------------------- #
+
+words = get_words()
 
 num_words = None
 while num_words is None or num_words < 5:
@@ -22,23 +40,20 @@ while num_words is None or num_words < 5:
     except ValueError:
         print("Invalid input. Please enter a number. ")
 
+# -------------------- #
+
 symbols = string.digits + "!@#$%^&*"
 
-capitalize_choice = input("Capitalize letters? [Y] / [N]: ").lower()
+capitalize_choice = input("Capitalize the first letter of each word? [Y] / [N]: ").lower()
 capitalize = capitalize_choice == "y"
 
-# Randomization with special characters / numbers
-def randomize_word(word):
-    if capitalize:
-        word = word.capitalize()
-    token = secrets.choice(symbols)
-    word = word + token
-    return word
+include_special_choice = input("Include special characters / numbers in words? [Y] / [N]: ").lower()
+include_special = include_special_choice == "y"
 
 while True:
-    password_list = [randomize_word(secrets.choice(words)) for _ in range(num_words)]
+    password_list = [randomize_word(secrets.choice(words), capitalize, include_special) for _ in range(num_words)]
     password = "-".join(password_list)
-    
+
     print("\nSuccessfully Generated! Copy below:")
     print(f"\n{password}\n")
     
