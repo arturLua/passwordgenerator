@@ -13,7 +13,7 @@ def get_words():
         return words
 
     except requests.RequestException:
-        print("Error acessing the word list.")
+        print("Error accessing the word list.")
         exit(1)
 
 # -------------------- #
