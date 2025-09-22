@@ -30,7 +30,13 @@ def randomize_word(word, capitalize=False, include_special=False):
 
 # -------------------- #
 
-words = get_words()
+words = []
+while not words:
+    words = get_words()
+    if not words:
+        print("Trying again in 5 seconds...")
+        import time
+        time.sleep(5)
 
 num_words = None
 while num_words is None or num_words < 5:
