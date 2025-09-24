@@ -70,4 +70,4 @@ On both systems, the version should be displayed on the output, e. g., "Python 3
 
 <hr>
 
-<p align="center">This project began for fun. It may take some time before PasswordGenerator can run more complex coding and have a modern interface, but I'm committed to making small, regular updates.</p>
+<p align="center">This project began for fun. It may take some time before the generator can run more complex coding and have a modern interface (i probably won't do it), but I'm committed to making small updates whenever i feel like it.</p>
