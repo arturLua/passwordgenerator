@@ -1,6 +1,6 @@
 <h1 align="center">Random   Password   Generator</h1>
 
-<p align="center">This Python script creates strong, up-to-date passwords by stringing together random English words with digits and symbols, striving to keep things secure without making you overthink it.</p>
+<p align="center">This Python script creates passwords by mixing random English words with digits and symbols, no need to overthink it.</p>
 
 <hr>
 
@@ -66,7 +66,7 @@ On both systems, the version should be displayed on the output, e. g., "Python 3
 >
 > - This project is a work-in-progress. My goal is not to make a professional app, so expect bugs and beginner-level coding.
 > - You can check the source-code and suggest upgrades if you feel like it.
-> - This project is licensed under a custom MIT-based license for non-commercial use. See the [LICENSE](./LICENSE) file for full details.
+> - This project is licensed under MIT. Check [LICENSE](./LICENSE).
 
 <hr>
 
